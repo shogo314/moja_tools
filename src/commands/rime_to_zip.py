@@ -44,7 +44,8 @@ def read_PROBLEM(PROBLEM_path):
 
 def search_TESTSET_and_SOLUTION(problem_directory_path, reference_solution):
     print("search_TESTSET_and_SOLUTION", problem_directory_path, reference_solution)
-    directory_list = glob.glob(problem_directory_path)
+    directory_list = glob.glob(os.path.join(problem_directory_path, "*"))
+    print(directory_list)
     TESTSET_directory = None
     SOLUTION_directory = None
     for d in directory_list:
