@@ -43,9 +43,7 @@ def read_PROBLEM(PROBLEM_path):
 
 
 def search_TESTSET_and_SOLUTION(problem_directory_path, reference_solution):
-    print("search_TESTSET_and_SOLUTION", problem_directory_path, reference_solution)
     directory_list = glob.glob(os.path.join(problem_directory_path, "*"))
-    print(directory_list)
     TESTSET_directory = None
     SOLUTION_directory = None
     for d in directory_list:
@@ -91,11 +89,12 @@ def write_problem_json(problem_directory_path, moja_out_directory_path, read_tit
             problem_json_path, os.path.join(moja_out_directory_path, "problem.json")
         )
     else:
-        with open(os.path.join(moja_out_directory_path, "problem.json")) as f:
+        with open(os.path.join(moja_out_directory_path, "problem.json"), "w") as f:
             f.write(json.dump({"title", title}, indent=4))
 
 
 def write_testcases(rime_out_testset, rime_out_solution, moja_out_in, moja_out_out):
+    print(glob.glob(rime_out_testset))
     for rime_out_in in glob.glob(rime_out_testset):
         file_in = os.path.basename(rime_out_in)
         if not file_in.endswith(".in"):
