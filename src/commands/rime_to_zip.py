@@ -29,6 +29,7 @@ def read_PROBLEM(PROBLEM_path):
         global read_title,read_reference_solution
         read_title = title
         read_reference_solution = reference_solution
+        print("run problem")
 
     with open(PROBLEM_path, "r") as f:
         exec(f.read())
