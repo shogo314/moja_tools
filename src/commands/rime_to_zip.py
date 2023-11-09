@@ -26,6 +26,7 @@ def read_PROBLEM(PROBLEM_path):
         need_custom_judge=True,
         reference_solution="",
     ):
+        global read_title,read_reference_solution
         read_title = title
         read_reference_solution = reference_solution
 
