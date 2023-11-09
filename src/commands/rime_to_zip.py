@@ -14,7 +14,7 @@ def read_PROBLEM(PROBLEM_path):
     read_title = None
     read_reference_solution = None
 
-    def atcoder_config(*tmp):
+    def atcoder_config(task_id=None):
         pass
 
     def problem(
