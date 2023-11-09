@@ -94,8 +94,7 @@ def write_problem_json(problem_directory_path, moja_out_directory_path, read_tit
 
 
 def write_testcases(rime_out_testset, rime_out_solution, moja_out_in, moja_out_out):
-    print(glob.glob(rime_out_testset))
-    for rime_out_in in glob.glob(rime_out_testset):
+    for rime_out_in in glob.glob(os.path.join(rime_out_testset, "*")):
         file_in = os.path.basename(rime_out_in)
         if not file_in.endswith(".in"):
             continue
