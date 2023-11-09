@@ -28,9 +28,6 @@ def read_PROBLEM(PROBLEM_path):
         need_custom_judge=True,
         reference_solution="",
     ):
-        print("run problem")
-        print("locals", locals())
-        print("globals", globals().keys())
         globals()["read_tmp"] = [title, reference_solution]
 
     with open(PROBLEM_path, "r") as f:
@@ -46,7 +43,7 @@ def read_PROBLEM(PROBLEM_path):
 
 
 def search_TESTSET_and_SOLUTION(problem_directory_path, reference_solution):
-    print("search_TESTSET_and_SOLUTION")
+    print("search_TESTSET_and_SOLUTION", problem_directory_path, reference_solution)
     directory_list = glob.glob(problem_directory_path)
     TESTSET_directory = None
     SOLUTION_directory = None
