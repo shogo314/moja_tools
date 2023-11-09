@@ -28,6 +28,7 @@ def read_PROBLEM(PROBLEM_path):
         need_custom_judge=True,
         reference_solution="",
     ):
+        global read_tmp
         print(read_tmp)
         read_tmp = [title, reference_solution]
         print("run problem")
