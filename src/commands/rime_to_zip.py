@@ -90,7 +90,7 @@ def write_problem_json(problem_directory_path, moja_out_directory_path, read_tit
         )
     else:
         with open(os.path.join(moja_out_directory_path, "problem.json"), "w") as f:
-            f.write(json.dump({"title", title}, indent=4))
+            json.dump({"title", title}, fp=f, indent=4)
 
 
 def write_testcases(rime_out_testset, rime_out_solution, moja_out_in, moja_out_out):
