@@ -53,12 +53,10 @@ def search_TESTSET_and_SOLUTION(problem_directory_path, reference_solution):
             if TESTSET_directory is not None:
                 print("There are two or more TESTSET directories.")
                 return None
-            TESTSET_directory = d.split(os.path.pathsep)[-1]
+            TESTSET_directory = d.split(os.path.sep)[-1]
         if os.path.isfile(os.path.join(d, "SOLUTION")):
-            print(d)
-            print(os.path.pathsep, d.split(os.path.pathsep)[-1])
-            if d.split(os.path.pathsep)[-1] == reference_solution:
-                SOLUTION_directory = d.split(os.path.pathsep)[-1]
+            if d.split(os.path.sep)[-1] == reference_solution:
+                SOLUTION_directory = d.split(os.path.sep)[-1]
     if TESTSET_directory is None:
         print("TESTSET", "が見つかりません。")
         return None
