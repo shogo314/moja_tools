@@ -1,12 +1,13 @@
 import sys
-import moja_tools.commands
+import src.commands
 
 
-def main(argv):
-    module_commands_dot = "moja_tools.commands."
+def main():
+    argv = sys.argv[1:]
+    module_commands_dot = "src.commands."
 
     if len(argv) >= 1:
-        module_name = module_commands_dot+argv[0]
+        module_name = module_commands_dot + argv[0]
         if module_name in sys.modules:
             module = sys.modules[module_name]
             return module.main(argv[1:])
