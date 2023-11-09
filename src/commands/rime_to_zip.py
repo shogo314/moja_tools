@@ -70,10 +70,7 @@ def search_TESTSET_and_SOLUTION(problem_directory_path, reference_solution):
 
 def write_problem_json(problem_directory_path, moja_out_directory_path, read_title):
     problem_json_path = os.path.join(problem_directory_path, "problem.json")
-    if ":" in read_title:
-        title = read_title.split(":")[1].strip()
-    else:
-        title = read_title
+    title = read_title
     problem_json_flag = False
     if os.path.exists(problem_json_path):
         try:
