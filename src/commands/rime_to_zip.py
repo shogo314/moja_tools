@@ -173,6 +173,11 @@ def main(argv):
     write_testcases(rime_out_testset, rime_out_solution, moja_out_in, moja_out_out)
 
     problem_slug = problem_directory_path.split(os.path.sep)[-1]
-    shutil.make_archive(problem_slug, format="zip", root_dir=problem_directory_path)
+    shutil.make_archive(
+        base_name=problem_slug,
+        format="zip",
+        root_dir=moja_out_directory_path,
+        base_dir=problem_directory_path,
+    )
 
     return 0
