@@ -31,13 +31,13 @@ def read_PROBLEM(PROBLEM_path):
         global read_tmp
         print("run problem")
         print("locals", locals())
-        print("globals", globals())
-        read_tmp = [title, reference_solution]
+        print("globals", globals().items())
+        globals()["read_tmp"] = [title, reference_solution]
 
     with open(PROBLEM_path, "r") as f:
         exec(f.read())
 
-    read_title, read_reference_solution = read_tmp
+    read_title, read_reference_solution = globals()["read_tmp"]
 
     if read_title is None or read_reference_solution is None:
         print("PROBLEMの中にproblem関数が見つかりません。")
