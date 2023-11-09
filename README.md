@@ -1,2 +1,2 @@
 # rime-to-moja
-Create a zip that can be used with MojaCoder for rime-managed problems.
+[Rime](https://github.com/icpc-jag/rime)で管理された問題をMojaCoderに投稿できる`zip`にするツールです。
