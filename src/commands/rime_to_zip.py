@@ -29,9 +29,9 @@ def read_PROBLEM(PROBLEM_path):
         reference_solution="",
     ):
         global read_tmp
+        print("run problem")
         print(read_tmp)
         read_tmp = [title, reference_solution]
-        print("run problem")
 
     with open(PROBLEM_path, "r") as f:
         exec(f.read())
