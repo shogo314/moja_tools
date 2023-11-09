@@ -103,8 +103,8 @@ def write_testcases(rime_out_testset, rime_out_solution, moja_out_in, moja_out_o
         rime_out_out = os.path.join(rime_out_solution, file_out)
         if not os.path.isfile(rime_out_out):
             continue
-        moja_in_case = os.path.join(moja_out_in, file_in)
-        moja_out_case = os.path.join(moja_out_out, file_out)
+        moja_in_case = os.path.join(moja_out_in, file_stem + ".txt")
+        moja_out_case = os.path.join(moja_out_out, file_stem + ".txt")
         shutil.copy(rime_out_in, moja_in_case)
         shutil.copy(rime_out_out, moja_out_case)
 
