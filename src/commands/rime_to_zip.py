@@ -28,7 +28,6 @@ def read_PROBLEM(PROBLEM_path):
         need_custom_judge=True,
         reference_solution="",
     ):
-        global read_tmp
         print("run problem")
         print("locals", locals())
         print("globals", globals().keys())
@@ -47,10 +46,12 @@ def read_PROBLEM(PROBLEM_path):
 
 
 def search_TESTSET_and_SOLUTION(problem_directory_path, reference_solution):
+    print("search_TESTSET_and_SOLUTION")
     directory_list = glob.glob(problem_directory_path)
     TESTSET_directory = None
     SOLUTION_directory = None
     for d in directory_list:
+        print(d)
         if os.path.isfile(os.path.join(d, "TESTSET")):
             if TESTSET_directory is not None:
                 print("There are two or more TESTSET directories.")
