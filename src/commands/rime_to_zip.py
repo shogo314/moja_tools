@@ -30,7 +30,8 @@ def read_PROBLEM(PROBLEM_path):
     ):
         global read_tmp
         print("run problem")
-        print(read_tmp)
+        print("locals", locals())
+        print("globals", globals())
         read_tmp = [title, reference_solution]
 
     with open(PROBLEM_path, "r") as f:
