@@ -11,6 +11,8 @@ def read_PROBLEM(PROBLEM_path):
         print(PROBLEM_path, "が見つかりません。")
         return None
 
+    read_tmp = [None, None]
+
     read_title = None
     read_reference_solution = None
 
@@ -26,15 +28,14 @@ def read_PROBLEM(PROBLEM_path):
         need_custom_judge=True,
         reference_solution="",
     ):
-        global read_title, read_reference_solution
-        print(read_title)
-        read_title = title
-        read_reference_solution = reference_solution
+        print(read_tmp)
+        read_tmp = [title, reference_solution]
         print("run problem")
 
     with open(PROBLEM_path, "r") as f:
         exec(f.read())
-    print(read_title)
+
+    read_title, read_reference_solution = read_tmp
 
     if read_title is None or read_reference_solution is None:
         print("PROBLEMの中にproblem関数が見つかりません。")
