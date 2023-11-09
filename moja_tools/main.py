@@ -1,9 +1,9 @@
 import sys
-import rime_to_moja.commands
+import moja_tools.commands
 
 
 def main(argv):
-    module_commands_dot = "rime_to_moja.commands."
+    module_commands_dot = "moja_tools.commands."
 
     if len(argv) >= 1:
         module_name = module_commands_dot+argv[0]
