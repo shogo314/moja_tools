@@ -1,2 +1,2 @@
 from . import help
-from . import run
+from . import rime_to_zip
